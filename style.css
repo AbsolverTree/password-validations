@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -12,14 +12,21 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #5c258d; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #5c258d, #4389a2);
-    background: linear-gradient(to right, #5c258d, #4389a2); 
-    color: white;
+    background: -webkit-linear-gradient(to right, #31134b, #234855);
+    background: linear-gradient(to right, #31134b, #234855); 
 }
 
 .container {
+    color: white;
     position: relative;
-    width: 300px;
+    width: 400px;
+    padding: 100px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgb(0, 0, 0, 0.30);;
+    background: #5c258d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5c258d, #4389a2);
+    background: linear-gradient(to right, #5c258d, #4389a2); 
+    /* backdrop-filter: blur(100px); */
 }
 
 .container .inputBox {
@@ -29,6 +36,7 @@ body {
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    margin: 5px 0 10px 0;
 }
 
 
@@ -52,4 +60,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container .inputBox #toggleBtn::before {
+    color: black;
+    content: '\f06e';
+    font-family: fontAwesome;
+}
+
+.container .inputBox #toggleBtn.hide::before {
+    color: black;
+    content: '\f070';
+    font-family: fontAwesome;
+}
+
+.container h1 {
+    line-height: 20px;
+}
+
+.container h4 {
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 2px;
+    line-height: 12px;
+}
+.validation {
+    display: flex;
+    justify-content:flex-start;
+    margin: 15px 0 0 20px;
 }
