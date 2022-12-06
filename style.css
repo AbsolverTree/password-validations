@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    border: 1px solid red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #5c258d; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5c258d, #4389a2);
+    background: linear-gradient(to right, #5c258d, #4389a2); 
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+}
+
+.container .inputBox {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.container .inputBox input{
+    position: relative;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+}
+
+.container .inputBox #toggleBtn {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
