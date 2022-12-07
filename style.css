@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
 }
 
 body {
@@ -32,11 +32,11 @@ body {
 .container .inputBox {
     position: relative;
     width: 100%;
-    background: #fff;
-    padding: 5px;
-    border-radius: 10px;
+    background: #00000062;
+    /* padding: 5px; */
+    border-radius: 10px 10px 0 0;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-    margin: 5px 0 10px 0;
+    margin: 5px 0 0 0;
 }
 
 
@@ -46,11 +46,14 @@ body {
     outline: none;
     border: none;
     padding: 10px 5px;
+    border-radius: 10px;
+    min-height: calc(34px + 10px);
 }
 
 .container .inputBox #toggleBtn {
     position: absolute;
     top: 6px;
+    bottom: 6px;
     right: 10px;
     width: 34px;
     height: 34px;
@@ -83,8 +86,30 @@ body {
     margin-top: 2px;
     line-height: 12px;
 }
+
 .validation {
+    padding: 10px;
+    background: #00000062;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.validation ul {
+    position: relative;
     display: flex;
-    justify-content:flex-start;
-    margin: 15px 0 0 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.validation ul li {
+    position: relative;
+    list-style: none;
+    font-size: 1em;
+}
+
+
+.list-style::before{
+    content: '\f192';
+    font-family: fontAwesome;
+    font-size: 0.7em;
 }
